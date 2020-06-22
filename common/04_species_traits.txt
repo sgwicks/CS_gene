@@ -891,7 +891,6 @@ trait_large = {
 	icon = "gfx/interface/icons/traits/trait_pc_desert_preference.dds"
 	initial = yes
 	modification = no
-	randomized = no
 	allowed_archetypes = { BIOLOGICAL }
 	sorting_priority = 30
 	potential_crossbreeding_chance = 1.0
@@ -901,5 +900,8 @@ trait_large = {
 		pc_desert_habitability = 0.10
 		pc_ocean_habitability = 0.10
 		pc_arctic_habitability = 0.10
+	}
+	species_potential_add = {
+		always = no
 	}
 }
