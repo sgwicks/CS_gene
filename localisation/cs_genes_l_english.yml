@@ -2,3 +2,5 @@
 
 trait_large: "Large"
 trait_large_desc: "This species has adapted to live on planets with a lot of space"
+trait_small: "Small"
+trait_small_desc: "This species has adapted to live on planets with very little space"
