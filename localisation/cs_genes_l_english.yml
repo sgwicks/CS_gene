@@ -28,6 +28,13 @@ trait_amphibious_desc: "Amphibious description"
 trait_thick_fat: "Thick Fat"
 trait_thick_fat_desc: "Thick Fat description"
 
+# General Traits
+
+trait_long_life: "Long Life"
+trait_long_life_desc: "Long life desc"
+leader_trait_long_life: "Long Life"
+leader_trait_long_life_desc: "Leader Long Life desc"
+
 # Technology
 
 tech_advanced_size_modification: "Advanced Size Modification (tech)"

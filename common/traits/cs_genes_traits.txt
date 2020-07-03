@@ -93,3 +93,19 @@ trait_thick_fat = {
 		pc_alpine_habitability = 0.10
 	}
 }
+
+trait_long_life = {
+	cost = 1
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_resilient.dds"
+	initial = yes
+	modification = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL }
+	improves_leaders = yes
+	modifier = {
+		bio_pop_growth_speed = -0.10
+		planet_jobs_engineering_research_produces_mult = 0.05
+		planet_jobs_society_research_produces_mult = 0.05
+		planet_jobs_physics_research_produces_mult = 0.05
+	}
+}
