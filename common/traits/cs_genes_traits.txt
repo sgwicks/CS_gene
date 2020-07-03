@@ -1,0 +1,47 @@
+trait_exceptionally_large = {
+	cost = 1
+	icon = "gfx/interface/icons/traits/trait_pc_desert_preference.dds"
+	initial = no
+	modification = yes
+	randomized = no
+	allowed_archetypes = { BIOLOGICAL LITHOID PRESAPIENT }
+	sorting_priority = 30
+	potential_crossbreeding_chance = 0.5
+	opposites = { "trait_exceptionally_small" }
+	modifier = {
+		army_damage_mult = 0.20
+		planet_jobs_worker_produces_mult = 0.025
+		pc_desert_habitability = 0.20
+        pc_arctic_habitability = 0.20
+        pc_ocean_habitability = 0.20
+		pop_housing_usage_mult = 0.1
+		planet_pops_consumer_goods_upkeep_mult = 0.1
+	}
+	prerequisites = {
+		tech_advanced_size_modification
+	}
+}
+
+trait_exceptionally_small = {
+	cost = 1
+	icon = "gfx/interface/icons/traits/trait_pc_desert_preference.dds"
+	initial = no
+	modification = yes
+	randomized = no
+	allowed_archetypes = { BIOLOGICAL LITHOID PRESAPIENT }
+	sorting_priority = 30
+	potential_crossbreeding_chance = 0.5
+	opposites = { "trait_exceptionally_large" }
+	modifier = {
+		pop_housing_usage_mult = -0.05
+		planet_pops_consumer_goods_upkeep_mult = -0.05
+		pc_tundra_habitability = 0.20
+		pc_savannah_habitability = 0.20
+		pc_tropical_habitability = 0.20
+		army_damage_mult = -0.40
+		planet_jobs_worker_produces_mult = -0.05
+	}
+	prerequisites = {
+		tech_advanced_size_modification
+	}
+}
