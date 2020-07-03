@@ -1,6 +1,6 @@
 ﻿l_english: 
 
-# Traits
+# Habitability Traits
 
 trait_large: "Large"
 trait_large_desc: "This species has adapted to live on planets with a lot of space"
@@ -14,6 +14,19 @@ trait_medium: "Medium"
 trait_medium_desc: "This species has adapted to live on planets with moderate space available"
 trait_temperate: "Temperate"
 trait_temperate_desc: "This species has adapted to live on temperate planets"
+
+# Advanced Habitability Traits
+
+trait_exceptionally_large: "Exceptionally Large"
+trait_exceptionally_large_desc: "This species has been artificially upsized to take advantage of open spaces"
+trait_exceptionally_small: "Exceptionally Small"
+trait_exceptionally_small_desc: "This species has been artificially downsized to take advantage of cramped spaces"
+trait_drought_resistant: "Drought Resistant"
+trait_drought_resistant_desc: "Drought Resistant description"
+trait_amphibious: "Amphibious"
+trait_amphibious_desc: "Amphibious description"
+trait_thick_fat: "Thick Fat"
+trait_thick_fat_desc: "Thick Fat description"
 
 # Technology
 
