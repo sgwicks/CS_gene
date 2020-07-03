@@ -100,7 +100,7 @@ trait_long_life = {
 	initial = yes
 	modification = yes
 	randomized = yes
-	allowed_archetypes = { BIOLOGICAL }
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
 	improves_leaders = yes
 	modifier = {
 		bio_pop_growth_speed = -0.10
@@ -109,3 +109,38 @@ trait_long_life = {
 		planet_jobs_physics_research_produces_mult = 0.05
 	}
 }
+
+trait_fertile = {
+	cost = 1
+	icon = ""
+	initial = yes
+	modification = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+	modifier = {
+		bio_pop_growth_speed = 0.10
+		planet_pops_food_upkeep_mult = 0.10
+		pop_amenities_usage_mult = 0.05
+	}
+}
+
+trait_multi_limbed = {
+	cost = 1
+	icon = ""
+	initial = yes
+	modification = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID PRESAPIENT }
+	modifier = {
+		planet_jobs_specialist_produces_mult = 0.10
+		planet_jobs_specialist_upkeep_mult = 0.10 # May not work
+	}
+}
+
+cost = 1
+	icon = ""
+	initial = yes
+	modification = yes
+	randomized = yes
+	allowed_archetypes = { BIOLOGICAL }
+	modifier = {}
