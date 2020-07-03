@@ -1,0 +1,12 @@
+on_game_start_country = {
+	events = {
+		cs_genes.3
+		cs_genes.1
+	}
+}
+
+empire_init_capital_planet = {
+	events = {
+		cs_genes.2
+	}
+}

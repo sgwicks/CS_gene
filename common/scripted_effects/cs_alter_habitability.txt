@@ -1,0 +1,367 @@
+@desert = trait_pc_desert_preference
+@arid = trait_pc_arid_preference
+@savannah = trait_pc_savannah_preference
+@ocean = trait_pc_ocean_preference
+@continental = trait_pc_continental_preference
+@tropical = trait_pc_tropical_preference
+@arctic = trait_pc_arctic_preference
+@alpine = trait_pc_alpine_preference
+@tundra = trait_pc_tundra_preference
+
+alter_species_habitability = {
+	if = { #desert -> large, cold-blooded
+		limit = {has_trait = @desert }
+			
+		modify_species = {
+			add_trait = trait_large
+			remove_trait = @desert
+		}
+		modify_species = {
+			add_trait = trait_cold_blooded
+		}
+	}
+
+	if = { #arid -> medium, cold-blooded
+		limit = { has_trait = @arid }
+
+		modify_species = {
+			add_trait = trait_medium
+			remove_trait = @arid
+		}
+		modify_species = {
+			add_trait = trait_cold_blooded
+		}
+	}
+
+	if = { #savannah -> small, cold-blooded
+		limit = { has_trait = @savannah }
+
+		modify_species = {
+			add_trait = trait_small
+			remove_trait = @savannah
+		}
+		modify_species = {
+			add_trait = trait_cold_blooded
+		}
+	}
+
+	if = { #ocean -> large, temperate
+		limit = {has_trait = @ocean }
+
+	
+		modify_species = {
+			add_trait = trait_large
+			remove_trait = @ocean
+		}
+		modify_species = {
+			add_trait = trait_temperate
+		}
+	}
+
+	if = { #continental -> medium, temperate
+		limit = { has_trait = @continental }
+			
+		modify_species = {
+			add_trait = trait_temperate
+		}	
+		modify_species = {
+			add_trait = trait_medium
+		}
+	}
+
+	if = { #tropical -> small, temperate
+		limit = { has_trait = @tropical }
+
+		modify_species = {
+			add_trait = trait_small
+			remove_trait = @tropical
+		}
+		modify_species = {
+			add_trait = trait_temperate
+		}
+	}
+
+	if = { #arctic -> large, insulated
+		limit = {has_trait = @arctic }
+
+		modify_species = {
+			add_trait = trait_large
+			remove_trait = @arctic
+		}
+		modify_species = {
+			add_trait = trait_insulated
+		}
+	}
+
+	if = { #alpine -> medium, insulated
+		limit = { has_trait = @alpine }
+
+		modify_species = {
+			add_trait = trait_medium
+			remove_trait = @alpine
+		}
+		modify_species = {
+			add_trait = trait_insulated
+		}
+	}
+
+	if = { #tundra -> small, insulated
+		limit = { has_trait = @tundra }
+
+		modify_species = {
+			add_trait = trait_small
+			remove_trait = @tundra
+		}
+		modify_species = {
+			add_trait = trait_insulated
+		}
+	}
+}
+
+alter_owner_habitability = {
+	if = { #desert -> large, cold-blooded
+		limit = { owner = { has_trait = @desert }}
+			
+		owner = {
+			modify_species = {
+				add_trait = trait_large
+				remove_trait = @desert
+			}
+			modify_species = {
+				add_trait = trait_cold_blooded
+			}
+		}
+	}
+
+	if = { #arid -> medium, cold-blooded
+		limit = { owner = { has_trait = @arid }}
+
+		owner = {
+			modify_species = {
+				add_trait = trait_medium
+				remove_trait = @arid
+			}
+			modify_species = {
+				add_trait = trait_cold_blooded
+			}
+		}
+	}
+
+	if = { #savannah -> small, cold-blooded
+		limit = { owner = { has_trait = @savannah }}
+
+		owner = {
+			modify_species = {
+				add_trait = trait_small
+				remove_trait = @savannah
+			}
+			modify_species = {
+				add_trait = trait_cold_blooded
+			}
+		}
+	}
+
+	if = { #ocean -> large, temperate
+		limit = { owner = { has_trait = @ocean }}
+
+		owner = {
+			modify_species = {
+				add_trait = trait_large
+				remove_trait = @ocean
+			}
+			modify_species = {
+				add_trait = trait_temperate
+			}
+		}
+	}
+
+	if = { #continental -> medium, temperate
+		limit = { owner = { has_trait = @continental }}
+
+		owner = {
+			modify_species = {
+				add_trait = trait_medium
+				remove_trait = @continental
+			}
+			modify_species = {
+				add_trait = trait_temperate
+			}
+		}
+	}
+
+	if = { #tropical -> small, temperate
+		limit = { owner = { has_trait = @tropical }}
+
+		owner = {
+			modify_species = {
+				add_trait = trait_small
+				remove_trait = @tropical
+			}
+			modify_species = {
+				add_trait = trait_temperate
+			}
+		}
+	}
+
+	if = { #arctic -> large, insulated
+		limit = { owner = { has_trait = @arctic }}
+
+		owner = {
+			modify_species = {
+				add_trait = trait_large
+				remove_trait = @arctic
+			}
+			modify_species = {
+				add_trait = trait_insulated
+			}
+		}
+	}
+
+	if = { #alpine -> medium, insulated
+		limit = { owner = { has_trait = @alpine }}
+
+		owner = {
+			modify_species = {
+				add_trait = trait_medium
+				remove_trait = @alpine
+			}
+			modify_species = {
+				add_trait = trait_insulated
+			}
+		}
+	}
+
+	if = { #tundra -> small, insulated
+		limit = { owner = { has_trait = @tundra }}
+
+		owner = {
+			modify_species = {
+				add_trait = trait_small
+				remove_trait = @tundra
+			}
+			modify_species = {
+				add_trait = trait_insulated
+			}
+		}
+	}
+}
+
+alter_pop_habitability = {
+	every_owned_pop = {
+		limit = {
+			pop_has_trait = trait_pc_desert_preference
+		}
+		modify_species = {
+			add_trait = trait_large
+			remove_trait = trait_pc_desert_preference
+		}
+		modify_species = {
+			add_trait = trait_cold_blooded
+		}
+	}
+
+	every_owned_pop = {
+		limit = {
+			pop_has_trait = trait_pc_ocean_preference
+		}
+		modify_species = {
+			add_trait = trait_large
+			remove_trait = trait_pc_ocean_preference
+		}
+		modify_species = {
+			add_trait = trait_temperate
+		}
+	}
+
+	every_owned_pop = {
+		limit = {
+			pop_has_trait = trait_pc_arctic_preference
+		}
+		modify_species = {
+			add_trait = trait_large
+			remove_trait = trait_pc_arctic_preference
+		}
+		modify_species = {
+			add_trait = trait_insulated
+		}
+	}
+
+	every_owned_pop = {
+		limit = {
+			pop_has_trait = trait_pc_arid_preference
+		}
+		modify_species = {
+			add_trait = trait_cold_blooded
+			remove_trait = trait_pc_arid_preference
+		}
+		modify_species = {
+			add_trait = trait_medium
+		}
+	}
+
+	every_owned_pop = {
+		limit = {
+			pop_has_trait = trait_pc_alpine_preference
+		}
+		modify_species = {
+			add_trait = trait_insulated
+			remove_trait = trait_pc_alpine_preference
+		}
+		modify_species = {
+			add_trait = trait_medium
+		}
+	}
+
+	every_owned_pop = {
+		limit = {
+			pop_has_trait = trait_pc_savannah_preference
+		}
+		modify_species = {
+			add_trait = trait_small
+			remove_trait = trait_pc_savannah_preference
+		}
+		modify_species = {
+			add_trait = trait_cold_blooded
+		}
+	}
+
+	every_owned_pop = {
+		limit = {
+			pop_has_trait = trait_pc_tropical_preference
+		}
+		modify_species = {
+			add_trait = trait_small
+			remove_trait = trait_pc_tropical_preference
+		}
+		modify_species = {
+			add_trait = trait_temperate
+		}
+		
+	}
+
+	every_owned_pop = {
+		limit = {
+			pop_has_trait = trait_pc_tundra_preference
+		}
+		modify_species = {
+			add_trait = trait_small
+			remove_trait = trait_pc_tundra_preference
+		}
+		modify_species = { 
+			add_trait = trait_insulated
+		}
+	}
+
+	every_owned_pop = {
+		limit = {
+			pop_has_trait = trait_pc_continental_preference
+		}
+		modify_species = {
+			add_trait = trait_medium
+			remove_trait = trait_pc_continental_preference
+		}
+		modify_species = {
+			add_trait = trait_temperate
+		}
+	}
+}

@@ -1,5 +1,7 @@
 ﻿l_english: 
 
+# Traits
+
 trait_large: "Large"
 trait_large_desc: "This species has adapted to live on planets with a lot of space"
 trait_small: "Small"
@@ -8,3 +10,14 @@ trait_cold_blooded: "Cold Blooded"
 trait_cold_blooded_desc: "This species has adapted to live on warm planets"
 trait_insulated: "Insulated"
 trait_insulated_desc: "This species has adapted to live on cold planets"
+trait_medium: "Medium"
+trait_medium_desc: "This species has adapted to live on planets with moderate space available"
+trait_temperate: "Temperate"
+trait_temperate_desc: "This species has adapted to live on temperate planets"
+
+# Technology
+
+tech_advanced_size_modification: "Advanced Size Modification (tech)"
+tech_advanced_size_modification_desc: "Allows modification of a species' inherent size (tech)"
+feature_advanced_size_modification: "Advanced Size Modification"
+feature_advanced_size_modification_desc: "Allows modification of a species' inherent size"

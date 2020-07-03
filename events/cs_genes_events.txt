@@ -1,0 +1,42 @@
+namespace = cs_genes
+
+# Run on_game_start_country
+# For all owned pops, check habitability preferences, and replace them with new habitability traits
+event = {
+	id = cs_genes.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		alter_pop_habitability = yes
+	}
+}
+
+
+# On empire initialisation, set empire main species habitability traits
+planet_event = {
+	id = cs_genes.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		alter_owner_habitability = yes
+	}
+}
+
+
+# Set Fallen Empire habitability traits
+country_event = {
+	id = cs_genes.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = fallen_empire
+	}
+
+	immediate = {
+		alter_owner_habitability = yes
+	}
+	
+}
